@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1657267412997" clover="3.2.0">
-  <project timestamp="1657267412997" name="All files">
+<coverage generated="1657267816375" clover="3.2.0">
+  <project timestamp="1657267816375" name="All files">
     <metrics statements="46" coveredstatements="46" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2" elements="55" coveredelements="55" complexity="0" loc="46" ncloc="46" packages="1" files="2" classes="2"/>
     <file name="getfile.js" path="/home/julia/frontend-project-lvl2/src/getfile.js">
       <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
