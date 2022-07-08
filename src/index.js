@@ -1,20 +1,9 @@
 import _ from 'lodash';
-import path from 'path';
-import { readFileSync } from 'fs';
-import { cwd } from 'process';
+import getFile from './getfile.js';
 
 const genDiff = (fileName1, fileName2) => {
-  const currentPath = cwd();
-
-  const findFile1 = readFileSync(
-    path.resolve(currentPath, '__fixture__', fileName1)
-  );
-  const file1 = JSON.parse(findFile1);
-
-  const findFile2 = readFileSync(
-    path.resolve(currentPath, '__fixture__', fileName2)
-  );
-  const file2 = JSON.parse(findFile2);
+  const file1 = getFile(fileName1);
+  const file2 = getFile(fileName2);
 
   const keysObjFile1 = Object.keys(file1);
   const keysObjFile2 = Object.keys(file2);
