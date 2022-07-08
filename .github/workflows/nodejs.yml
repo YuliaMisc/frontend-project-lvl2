@@ -1,3 +1,4 @@
+# Name of workflow
 name: Node CI
 
 # Trigger the workflow on push or pull request
