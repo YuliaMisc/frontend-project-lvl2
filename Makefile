@@ -1,9 +1,9 @@
 install:
-	npm ci
-gendiff:
-	node bin/gendiff.js
+	npx ci
+
 lint:
-	npx eslint 
+	npx eslint .
+
 test:
 	NODE_OPTIONS=--experimental-vm-modules npx jest
 
