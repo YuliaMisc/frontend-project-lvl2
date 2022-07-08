@@ -14,9 +14,9 @@ const genDiff = (fileName1, fileName2) => {
   const arrayStrings = sortCommonKeys.reduce((acc, key) => {
     if (file1[key] === file2[key]) {
       acc.push(` ${key}: ${file1[key]}`);
-    } else if (!Object.hasOwn(file2, key)) {
+    } else if (!_.has(file2, key)) {
       acc.push(`-${key}: ${file1[key]}`);
-    } else if (!Object.hasOwn(file1, key)) {
+    } else if (!_.has(file1, key)) {
       acc.push(`+${key}: ${file2[key]}`);
     } else if (file1[key] !== file2[key]) {
       acc.push(`-${key}: ${file1[key]}`);
