@@ -10,5 +10,6 @@ const getFile = (fileName) => {
   if (extName === '.json') {
     return JSON.parse(readFile);
   }
+  return 1;
 };
 export default getFile;

@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '14.x'
       - run: make install
-      # - run: make lint
+      - run: make lint
       - run: make test
       - name: code coverage
         uses: paambaati/codeclimate-action@v3.0.0
