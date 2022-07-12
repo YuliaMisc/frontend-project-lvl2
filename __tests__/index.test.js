@@ -4,10 +4,10 @@ import { dirname, resolve } from 'path';
 import { readFileSync } from 'fs';
 import genDiff from '../src/index.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const fileName = fileURLToPath(import.meta.url);
+const dirName = dirname(fileName);
 
-const getFixturePath = (filename) => resolve(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename) => resolve(dirName, '..', '__fixtures__', filename);
 
 test('flat file comparison json', () => {
   const expected = readFileSync(getFixturePath('result.txt'), 'utf-8');
