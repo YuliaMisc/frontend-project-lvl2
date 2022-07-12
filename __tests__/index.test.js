@@ -15,3 +15,10 @@ test('flat file comparison json', () => {
   const result = genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
   expect(result).toEqual(expected);
 });
+
+test('flat file comparison yaml', () => {
+  const expected = readFileSync(getFixturePath('result.txt'), 'utf-8');
+
+  const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml');
+  expect(result).toEqual(expected);
+});

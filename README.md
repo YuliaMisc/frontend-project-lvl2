@@ -8,4 +8,7 @@
 ![[example workflow]](https://github.com/YuliaMisc/frontend-project-lvl2/actions/workflows/nodejs.yml/badge.svg)
 
 Display help and gendiff wit flat files(JSON):
-<a href="https://asciinema.org/a/506375" target="_blank"><img src="https://asciinema.org/a/506375.svg" /></a>
+<a href="https://asciinema.org/a/507985" target="_blank"><img src="https://asciinema.org/a/507985.svg" /></a>
+
+Display help and gendiff wit flat files(YAML):
+<a href="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO" target="_blank"><img src="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO.svg" /></a>
