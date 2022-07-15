@@ -10,5 +10,8 @@
 Display help and gendiff wit flat files(JSON):
 <a href="https://asciinema.org/a/507985" target="_blank"><img src="https://asciinema.org/a/507985.svg" /></a>
 
-Display help and gendiff wit flat files(YAML):
+Display gendiff wit flat files(YAML):
 <a href="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO" target="_blank"><img src="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO.svg" /></a>
+
+Display gendiff with nested files::
+<a href="https://asciinema.org/a/SpypuNDqDCGxlpUHA3hZguZxU" target="_blank"><img src="https://asciinema.org/a/SpypuNDqDCGxlpUHA3hZguZxU.svg" /></a>

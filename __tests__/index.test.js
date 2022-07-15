@@ -9,14 +9,14 @@ const dirName = dirname(fileName);
 
 const getFixturePath = (filename) => resolve(dirName, '..', '__fixtures__', filename);
 
-test('flat file comparison json', () => {
+test('file comparison json', () => {
   const expected = readFileSync(getFixturePath('result.txt'), 'utf-8');
 
   const result = genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
   expect(result).toEqual(expected);
 });
 
-test('flat file comparison yaml', () => {
+test('file comparison yaml', () => {
   const expected = readFileSync(getFixturePath('result.txt'), 'utf-8');
 
   const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml');
