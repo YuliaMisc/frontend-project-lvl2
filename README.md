@@ -13,5 +13,8 @@ Display help and gendiff wit flat files(JSON):
 Display gendiff wit flat files(YAML):
 <a href="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO" target="_blank"><img src="https://asciinema.org/a/7mat5gTz8rN3nEvONndKJNJuO.svg" /></a>
 
-Display gendiff with nested files::
+Display gendiff with nested files(format Stylish):
 <a href="https://asciinema.org/a/SpypuNDqDCGxlpUHA3hZguZxU" target="_blank"><img src="https://asciinema.org/a/SpypuNDqDCGxlpUHA3hZguZxU.svg" /></a>
+
+Display gendiff with nested files(format Plain)
+<a href="https://asciinema.org/a/u7maaibp94O7WCsiufVXJM9Sq" target="_blank"><img src="https://asciinema.org/a/u7maaibp94O7WCsiufVXJM9Sq.svg" /></a>
