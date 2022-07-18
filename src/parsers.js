@@ -5,10 +5,14 @@ const parsers = (path) => {
   const extName = getExtName(path);
   const file = readFile(path);
 
-  if (extName === '.json') {
-    return JSON.parse(file);
+  switch (extName) {
+    case '.json':
+      return JSON.parse(file);
+    case '.yaml' || '.yml':
+      return yaml.load(file);
+    default:
+      throw new Error('Invalid file extension! Try supported formats.');
   }
-  return yaml.load(file);
 };
 
 export default parsers;
