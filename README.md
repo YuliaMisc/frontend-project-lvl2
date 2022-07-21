@@ -7,6 +7,20 @@
 
 ![[example workflow]](https://github.com/YuliaMisc/frontend-project-lvl2/actions/workflows/nodejs.yml/badge.svg)
 
+<h1>Difference Calculator</h1>
+is a program that determines the difference between two data structures.
+
+<h3>Utility features:</h3>
+- Support for input formats: yaml, json;
+- Report generation in the form of plain text, stylish and json;
+
+<h2>To install:</h2>
+- Clone repository;
+- Execute the command `make install`;
+- To install a package from the operating system, use the command `npm link`.
+
+<h3>Usage example:</h3>
+
 Display help and gendiff wit flat files(JSON):
 <a href="https://asciinema.org/a/507985" target="_blank"><img src="https://asciinema.org/a/507985.svg" /></a>
 

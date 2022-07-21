@@ -12,7 +12,7 @@ const selectionFormat = (data, format) => {
   if (format === 'json') {
     return formaterJson(data);
   }
-  return `Sorry, this format ${format} is not supported ;(.`;
+  throw new Error('Sorry, this format is not supported ;(.');
 };
 
 export default selectionFormat;

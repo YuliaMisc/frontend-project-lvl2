@@ -9,44 +9,36 @@ const dirName = dirname(fileName);
 
 const getFixturePath = (filename) => resolve(dirName, '..', '__fixtures__', filename);
 
-test('file comparison json, format Stylish', () => {
-  const expected = readFileSync(getFixturePath('resultStylish.txt'), 'utf-8');
+const resultStylish = readFileSync(getFixturePath('resultStylish.txt'), 'utf-8');
+const resultPlain = readFileSync(getFixturePath('resultPlain.txt'), 'utf-8');
+const resultJson = readFileSync(getFixturePath('resultJson.txt'), 'utf-8');
 
-  const result = genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
-  expect(result).toEqual(expected);
+test('file comparison json, format Stylish', () => {
+  const result = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'));
+  expect(result).toEqual(resultStylish);
 });
 
 test('file comparison yaml, format Stylish', () => {
-  const expected = readFileSync(getFixturePath('resultStylish.txt'), 'utf-8');
-
-  const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml');
-  expect(result).toEqual(expected);
+  const result = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'));
+  expect(result).toEqual(resultStylish);
 });
 
 test('file comparison json, format Plain', () => {
-  const expected = readFileSync(getFixturePath('resultPlain.txt'), 'utf-8');
-
-  const result = genDiff('__fixtures__/file1.json', '__fixtures__/file2.json', 'plain');
-  expect(result).toEqual(expected);
+  const result = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'plain');
+  expect(result).toEqual(resultPlain);
 });
 
 test('file comparison yaml, format Plain', () => {
-  const expected = readFileSync(getFixturePath('resultPlain.txt'), 'utf-8');
-
-  const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'plain');
-  expect(result).toEqual(expected);
+  const result = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'plain');
+  expect(result).toEqual(resultPlain);
 });
 
 test('file comparison json, format Json', () => {
-  const expected = readFileSync(getFixturePath('resultJson.txt'), 'utf-8');
-
-  const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'json');
-  expect(result).toEqual(expected);
+  const result = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'json');
+  expect(result).toEqual(resultJson);
 });
 
 test('file comparison yaml, format Json', () => {
-  const expected = readFileSync(getFixturePath('resultJson.txt'), 'utf-8');
-
-  const result = genDiff('__fixtures__/file1.yaml', '__fixtures__/file2.yaml', 'json');
-  expect(result).toEqual(expected);
+  const result = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'json');
+  expect(result).toEqual(resultJson);
 });

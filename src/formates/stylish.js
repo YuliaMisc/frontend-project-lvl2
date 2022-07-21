@@ -45,7 +45,7 @@ const formaterStylish = (tree, replacer = '    ') => {
       if (node.status === 'children') {
         return `${currentIndent}${node.key}: ${iter(node.value, depth + 1)}`;
       }
-      return `${node.status} not defined, please check the correctness of the entered data`;
+      throw new Error(`${node.status} not defined, please check the correctness of the entered data`);
     });
 
     return [

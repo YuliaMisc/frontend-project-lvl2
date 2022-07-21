@@ -1,26 +1,26 @@
 import _ from 'lodash';
 
-const buildTree = (file1, file2) => {
-  const keysObj1 = Object.keys(file1);
-  const keysObj2 = Object.keys(file2);
+const buildTree = (obj1, obj2) => {
+  const keysObj1 = Object.keys(obj1);
+  const keysObj2 = Object.keys(obj2);
   const sortCommonKeys = _.sortBy(_.union(keysObj1, keysObj2));
 
   const diffObj = sortCommonKeys.map((key) => {
-    if (_.isObject(file1[key]) && _.isObject(file2[key])) {
-      return { key, status: 'children', value: buildTree(file1[key], file2[key]) };
+    if (_.isPlainObject(obj1[key]) && _.isPlainObject(obj2[key])) {
+      return { key, status: 'children', value: buildTree(obj1[key], obj2[key]) };
     }
-    if (!_.has(file1, key)) {
-      return { key, status: 'added', value: file2[key] };
+    if (!_.has(obj1, key)) {
+      return { key, status: 'added', value: obj2[key] };
     }
-    if (!_.has(file2, key)) {
-      return { key, status: 'deleted', value: file1[key] };
+    if (!_.has(obj2, key)) {
+      return { key, status: 'deleted', value: obj1[key] };
     }
-    if (!_.isEqual(file1[key], file2[key])) {
+    if (!_.isEqual(obj1[key], obj2[key])) {
       return {
-        key, status: 'changed', value1: file1[key], value2: file2[key],
+        key, status: 'changed', value1: obj1[key], value2: obj2[key],
       };
     }
-    return { key, status: 'notChanged', value: file1[key] };
+    return { key, status: 'notChanged', value: obj1[key] };
   });
 
   return diffObj;
