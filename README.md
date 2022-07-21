@@ -10,14 +10,14 @@
 <h1>Difference Calculator</h1>
 is a program that determines the difference between two data structures.
 
-<h3>Utility features:</h3>
-- Support for input formats: yaml, json;
-- Report generation in the form of plain text, stylish and json;
+<h2>Utility features:</h2>
+<p>- Support for input formats: yaml, json;</p>
+<p>- Report generation in the form of plain text, stylish and json;</p>
 
-<h2>To install:</h2>
-- Clone repository;
-- Execute the command `make install`;
-- To install a package from the operating system, use the command `npm link`.
+<h3>To install:</h3>
+<p>- Clone repository;</p>
+<p>- Execute the command `make install`;</p>
+<p>- To install a package from the operating system, use the command `npm link`.</p>
 
 <h3>Usage example:</h3>
 
