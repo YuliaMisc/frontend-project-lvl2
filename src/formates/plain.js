@@ -22,8 +22,8 @@ const formaterPlain = (value) => {
     if (node.status === 'notChanged') {
       return [];
     }
-    if (node.status === 'children') {
-      return `${iter(node.value, [pahts]).join('\n')}`;
+    if (node.status === 'hasСhildren') {
+      return `${iter(node.children, [pahts]).join('\n')}`;
     }
     throw new Error(`${node.status} not defined, please check the correctness of the entered data`);
   });

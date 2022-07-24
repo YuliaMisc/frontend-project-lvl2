@@ -21,10 +21,10 @@ const formatValue = (currentValue, replacer, depth) => {
 const formaterStylish = (tree, replacer = '    ') => {
   const iter = (value, depth) => {
     const currentIndent = replacer.repeat(depth);
-    const indentKey = currentIndent.slice(2);
+    const indent = currentIndent.slice(2);
     const bracketIndent = replacer.repeat(depth - 1);
 
-    const getString = (coll, sing, val = coll.value) => `${indentKey}${sing} ${coll.key}: ${formatValue(val, replacer, depth)}`;
+    const getString = (coll, sing, val = coll.value) => `${indent}${sing} ${coll.key}: ${formatValue(val, replacer, depth)}`;
 
     const result = value.map((node) => {
       if (node.status === 'added') {
@@ -42,8 +42,8 @@ const formaterStylish = (tree, replacer = '    ') => {
       if (node.status === 'notChanged') {
         return getString(node, signs.unchanged);
       }
-      if (node.status === 'children') {
-        return `${currentIndent}${node.key}: ${iter(node.value, depth + 1)}`;
+      if (node.status === 'hasСhildren') {
+        return `${currentIndent}${node.key}: ${iter(node.children, depth + 1)}`;
       }
       throw new Error(`${node.status} not defined, please check the correctness of the entered data`);
     });

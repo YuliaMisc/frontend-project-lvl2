@@ -1,7 +1,7 @@
 import yaml from 'js-yaml';
 
-const parse = (string, type) => {
-  switch (type) {
+const parse = (string, extension) => {
+  switch (extension) {
     case '.json':
       return JSON.parse(string);
     case '.yaml':
