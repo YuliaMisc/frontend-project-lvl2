@@ -1,15 +1,15 @@
 import yaml from 'js-yaml';
 
-const parse = (string, extension) => {
-  switch (extension) {
-    case '.json':
+const parse = (string, type) => {
+  switch (type) {
+    case 'json':
       return JSON.parse(string);
-    case '.yaml':
+    case 'yaml':
       return yaml.load(string);
-    case '.yml':
+    case 'yml':
       return yaml.load(string);
     default:
-      throw new Error('Invalid file extension! Try supported formats.');
+      throw new Error('Invalid file type! Try supported formats.');
   }
 };
 
